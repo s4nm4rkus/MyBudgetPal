@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MyBudgetPal",
-    "slug": "MyBudgetPal",
+    "slug": "mybudgetpal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,10 +19,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.markusdev.mybudgetpal"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "42408e5c-f057-48cd-bbc6-93a6df81f874"
+      }
+    },
+    "owner": "markusdev"
   }
 }
