@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MyBudji",
-    "slug": "mybudgetpal",
+    "slug": "mybudji",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
