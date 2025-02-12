@@ -1,20 +1,30 @@
+import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import styles from "./screens/Welcome/welcome.style";
 
-export default function App() {
+const App = () => {
+  const [loaded] = useFonts({
+    MBold: require("./assets/fonts/Montserrat-Bold.ttf"), // Rename font file
+    MBlack: require("./assets/fonts/Montserrat-Black.ttf"),
+    MSemiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
+    MExtraBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
+    MMedium: require("./assets/fonts/Montserrat-Medium.ttf"),
+    MRegular: require("./assets/fonts/Montserrat-Regular.ttf"),
+    MLight: require("./assets/fonts/Montserrat-Light.ttf"),
+    MExtraLight: require("./assets/fonts/Montserrat-ExtraLight.ttf"),
+  });
+
+  if (!loaded) {
+    return null; // Show nothing until fonts are loaded
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Welcome MyBudji!</Text>
+      <Text style={{ fontFamily: "MSemiBold", fontSize: 20 }}>Welcome!</Text>
       <StatusBar style="auto" />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default App;

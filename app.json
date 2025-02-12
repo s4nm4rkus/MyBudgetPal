@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "assetBundlePatterns": ["**/*"],
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -30,6 +31,7 @@
         "projectId": "42408e5c-f057-48cd-bbc6-93a6df81f874"
       }
     },
-    "owner": "markusdev"
+    "owner": "markusdev",
+    "plugins": ["expo-font"]
   }
 }
